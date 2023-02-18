@@ -37,6 +37,7 @@ const drawChart = function () {
 
   new Chart(ctx, {
     type: "bar",
+    plugins: [ChartDataLabels],
     data: {
       labels: ["", "", "", ""],
       datasets: [
@@ -50,13 +51,27 @@ const drawChart = function () {
             getColor(scaleway),
             getColor(vultr),
           ],
-          fontSize: 16,
         },
       ],
     },
     options: {
       indexAxis: window.innerWidth > 768 ? "y" : "x",
       fontSize: 30,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        datalabels: {
+          // anchor: "end",
+          align: "end",
+          formatter: (val) => `${val.toFixed(2)}$`,
+          labels: {
+            value: {
+              color: "black",
+            },
+          },
+        },
+      },
       scales: {
         y: {
           beginAtZero: true,
@@ -88,6 +103,14 @@ multiBtn.addEventListener("input", () => {
 singleBtn.addEventListener("input", () => {
   drawChart();
 });
+
+window.addEventListener(
+  `resize`,
+  (event) => {
+    drawChart();
+  },
+  false
+);
 
 function getColor(company) {
   const min = Math.min(...data());
