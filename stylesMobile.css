@@ -1,0 +1,60 @@
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  .frame {
+    padding: 10px;
+    height: 100%;
+  }
+  .ranges {
+    order: 2;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .range {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .label {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .label-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .gb {
+    font-weight: bold;
+  }
+  .logo {
+    weight: 50px;
+    height: 15px;
+  }
+  .logo3 {
+    height: 10px;
+  }
+  .logo4 {
+    height: 10px;
+  }
+  .second {
+    flex-direction: column;
+    height: 70%;
+  }
+  .legend {
+    order: 2;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10% 10% 10%;
+  }
+  .company {
+    min-width: 20px;
+  }
+  .radioBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    weight: 100%;
+  }
+}

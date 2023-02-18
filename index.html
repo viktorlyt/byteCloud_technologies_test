@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./stylesMobile.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="ranges">
+        <div class="range">
+          <label for="storage" class="label"
+            >Storage: <span class="gb" id="spanStorage"></span> GB</label
+          >
+          <input
+            type="range"
+            id="storage"
+            name="storage"
+            min="0"
+            max="1000"
+            step="1"
+          />
+          <label for="storage" class="label label-bottom">
+            <span>0</span>
+            <span>1000</span>
+          </label>
+        </div>
+        <div class="range">
+          <label for="transfer" class="label"
+            >Transfer: <span class="gb" id="spanTransfer"></span> GB</label
+          >
+          <input
+            type="range"
+            id="transfer"
+            name="transfer"
+            min="0"
+            max="1000"
+            step="1"
+          />
+          <label for="transfer" class="label label-bottom">
+            <span>0</span>
+            <span>1000</span>
+          </label>
+        </div>
+      </div>
+      <div class="second">
+        <div class="legend">
+          <div>
+            <img src="./images/backblaze.png" alt="backblaze" class="logo" />
+          </div>
+          <div>
+            <img src="./images/bunny.svg" alt="bunny" class="logo" />
+            <div class="radioBtn">
+              <div>
+                <input type="radio" id="hdd" name="disk" value="hdd" checked />
+                <label for="hdd" class="legendLabel">HDD</label>
+              </div>
+              <div>
+                <input type="radio" id="ssd" name="disk" value="ssd" />
+                <label for="sdd" class="legendLabel">SSD</label>
+              </div>
+            </div>
+          </div>
+          <div class="company">
+            <img src="./images/scaleway.svg" alt="scaleway" class="logo3" />
+            <div class="radioBtn">
+              <div>
+                <input type="radio" id="multi" name="type" value="multi" checked />
+                <label for="multi" class="legendLabel">Multi</label>
+              </div>
+              <div>
+                <input type="radio" id="single" name="type" value="single" />
+                <label for="single" class="legendLabel">Single</label>
+              </div>
+            </div>
+          </div>
+          <div><img src="./images/vultr.svg" alt="vultr" class="logo4" /></div>
+        </div>
+        <div class="chart">
+          <canvas 
+            id="myChart" 
+          >
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
